@@ -115,7 +115,7 @@ EOF
         latest_version=`grep tag_name latest| awk -F '[:,"v]' '{print $6}'`
         rm -f latest
         green "开始下载最新版trojan amd64"
-        wget https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan
+        wget https://github.com/atrandys/trojan-plus/releases/download/v${latest_version}/trojan
         green "请设置trojan密码，建议不要出现特殊字符"
         read -p "请输入密码 :" trojan_passwd
         #trojan_passwd=$(cat /dev/urandom | head -1 | md5sum | head -c 8)
@@ -426,7 +426,7 @@ function update_trojan(){
     if version_lt "$curr_version" "$latest_version"; then
         green "当前版本$curr_version,最新版本$latest_version,开始升级……"
         mkdir trojan_update_temp && cd trojan_update_temp
-        wget https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan
+        wget https://github.com/atrandys/trojan-plus/releases/download/v${latest_version}/trojan
         \cp ./trojan /usr/src/trojan/
         cd .. && rm -rf trojan_update_temp
         systemctl restart trojan
