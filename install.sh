@@ -186,6 +186,11 @@ EOF
         "keep_alive": true,
         "fast_open": true,
         "fast_open_qlen": 20
+    },
+    "experimental":{
+        "pipeline_num" : 10,
+        "pipeline_ack_window" : 200,
+        "pipeline_proxy_icmp": true
     }
 }
 EOF
