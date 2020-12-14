@@ -116,6 +116,7 @@ EOF
         rm -f latest
         green "开始下载最新版trojan amd64"
         wget https://github.com/atrandys/trojan-plus/releases/download/v${latest_version}/trojan
+        chmod +x trojan
         green "请设置trojan密码，建议不要出现特殊字符"
         read -p "请输入密码 :" trojan_passwd
         #trojan_passwd=$(cat /dev/urandom | head -1 | md5sum | head -c 8)
