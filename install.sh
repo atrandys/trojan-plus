@@ -152,8 +152,7 @@ EOF
     },
     "experimental":{
         "pipeline_num" : 10,
-        "pipeline_ack_window" : 200,
-        "pipeline_proxy_icmp": true
+        "pipeline_ack_window" : 200
     }
 }
 EOF
