@@ -436,6 +436,7 @@ function update_trojan(){
         green "当前版本$curr_version,最新版本$latest_version,开始升级……"
         mkdir trojan_update_temp && cd trojan_update_temp
         wget https://github.com/atrandys/trojan-plus/releases/download/v${latest_version}/trojan
+        chmod +x trojan
         \cp ./trojan /usr/src/trojan/
         cd .. && rm -rf trojan_update_temp
         systemctl restart trojan
